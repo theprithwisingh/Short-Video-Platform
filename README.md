@@ -118,6 +118,6 @@ SMTP_PASS=
 ├── public/              # Static assets
 ├── types.d.ts           # Global TypeScript types
 
-❤️ by Prithwi singh x Hitesh sir
+❤️ by Hitesh Sir X Prithwi singh 
 
 

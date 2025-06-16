@@ -1,37 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Video Content Platform (Next.js + ImageKit + Razorpay)**
+
+A **modern full-stack video content platform** built with **Next.js 15**, **React 19**, and **TypeScript**, designed for uploading, managing, and selling video content. It includes user authentication, secure payments, responsive design, and media handling using **ImageKit**.
+
+---
+
+## 🚀 Features
+
+* 🔐 **User Authentication** – Powered by NextAuth.js with JWT
+* 📹 **Video Upload & Management** – ImageKit integration
+* 💳 **Payments** – Seamless Razorpay payment gateway
+* 🎨 **Modern UI** – Tailwind CSS + DaisyUI
+* 📱 **Fully Responsive** – Optimized for all devices
+* 🔒 **Secure API Routes** – Protected backend endpoints
+* 📧 **Email Notifications** – Integrated with Nodemailer
+* 🗄️ **MongoDB Database** – With Mongoose ORM
+
+
+## 🛠️ Tech Stack
+
+| Layer        | Technology                       |
+| ------------ | -------------------------------- |
+| Frontend     | Next.js 15, React 19, TypeScript |
+| Styling      | Tailwind CSS, DaisyUI            |
+| Auth         | NextAuth.js, JWT                 |
+| Database     | MongoDB, Mongoose                |
+| File Storage | ImageKit                         |
+| Payments     | Razorpay                         |
+| Email        | Nodemailer                       |
+| Forms        | React Hook Form                  |
+
+---
+
+## ⚙️ Prerequisites
+* Node.js (Latest LTS)
+* MongoDB database (local/cloud)
+* ImageKit Account
+* Razorpay Account
+* SMTP Server (Mailtrap, Gmail, etc.)
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Clone the repo
+git clone <repository-url>
+cd imagekit-video-main
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Then fill in all required keys in .env
+
+# Run the app
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.env` file should include:
 
-## Learn More
+```env
+# Database
+MONGODB_URI=
 
-To learn more about Next.js, take a look at the following resources:
+# NextAuth
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# ImageKit
+IMAGEKIT_PUBLIC_KEY=
+IMAGEKIT_PRIVATE_KEY=
+IMAGEKIT_URL_ENDPOINT=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Razorpay
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
 
-## Deploy on Vercel
+# Email (SMTP)
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# Short-Video-Platform" 
+## Available Scripts
+
+| Command            | Description                     |
+| ------------------ | ------------------------------- |
+| `npm run dev`      | Start development server        |
+| `npm run build`    | Build for production            |
+| `npm run start`    | Start production server         |
+| `npm run lint`     | Run ESLint checks               |
+| `npm run seed`     | Seed the database (if included) |
+| `npm run mailtrap` | Test SMTP mail setup            |
+
+---
+
+## Project Structure
+
+```
+├── app/
+│   ├── api/             # API routes (Next.js handlers)
+│   ├── components/      # UI components
+│   ├── login/           # Login page
+│   ├── register/        # Registration page
+│   └── upload/          # Upload functionality
+├── lib/                 # Helpers & utilities
+├── models/              # Mongoose models
+├── public/              # Static assets
+├── types.d.ts           # Global TypeScript types
+
+❤️ by Hitesh Sir X Prithwi singh 
+
+
